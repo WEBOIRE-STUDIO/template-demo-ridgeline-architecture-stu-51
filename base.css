@@ -1446,13 +1446,21 @@ body[class*="experimental-"] .hero-abstract-bg::after {
 /* ---------- Immersive 3D Hero (dark orbit) ---------- */
 .hero-immersive-3d {
   position: relative; min-height: 92vh; display: flex; align-items: center;
-  padding: 140px 24px 100px; overflow: hidden; background: #0a0a0d;
+  padding: 140px 24px 100px 7vw; overflow: hidden; background: #0a0a0d;
 }
 .hero-immersive-3d .experimental-particles { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
-.hero-immersive-3d .hero-inner { position: relative; z-index: 1; max-width: 900px; }
+/* Constrained and left-aligned so the text column stays clear of the 3D
+   scene's focal point (the orb renders centered in the canvas/camera view,
+   per the Three.js scene in script.js's 'orbit-orb' recipe) — an
+   asymmetric text-left/object-right composition, matching the reference,
+   rather than text and orb both fighting for the same center spot. */
+.hero-immersive-3d .hero-inner { position: relative; z-index: 1; max-width: 440px; margin: 0; }
 .hero-immersive-heading {
-  font-size: clamp(2.8rem, 7.4vw, 6.4rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.03;
-  color: var(--text-on-primary, #f2f1ee);
+  /* Deliberately modest for a NARROW text column (see .hero-inner max-width
+     above) — this composition's drama comes from the dark 3D scene filling
+     the rest of the viewport, not from the type itself being oversized. */
+  font-size: clamp(1.8rem, 3.4vw, 3.2rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.08;
+  color: var(--text-on-primary, #f2f1ee); word-break: break-word;
 }
 .hero-immersive-3d .eyebrow-on-dark {
   display: inline-block; padding: 6px 16px; border: 1px solid rgba(255,255,255,.22); border-radius: 999px;
