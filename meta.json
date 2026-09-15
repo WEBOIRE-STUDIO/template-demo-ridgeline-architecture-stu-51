@@ -1,0 +1,73 @@
+{
+  "templateKey": "professional_services",
+  "heroVariant": "editorial-masthead-hero",
+  "serviceLayout": "numbered-list",
+  "ctaStyle": "outline",
+  "paletteSeed": 0,
+  "heroSeed": 0,
+  "copySeed": 0,
+  "artDirection": {
+    "key": "editorial-motion-masthead",
+    "label": "Editorial Motion — masthead & pull-quote",
+    "rationale": "Reference pattern: a warm, organic magazine-style layout — asymmetric grid, a masthead-style hero with a byline, a drop-cap opening paragraph, and an oversized pull-quote breaking the column (studied from a premium editorial-style brand site on Dribbble's animation-websites search — recreated as an original layout). Services render as an editorial index/table-of-contents list, not icon cards.",
+    "motionPolicy": "editorial",
+    "selectionReason": "explicitly forced (status: pending_review)"
+  },
+  "visualSystem": {
+    "key": "editorial-motion-masthead",
+    "label": "Editorial Motion — masthead & pull-quote",
+    "dark": false,
+    "cardStyle": "editorial-tactile",
+    "ctaLayout": "split-image",
+    "selectionReason": "explicitly forced (status: pending_review)"
+  },
+  "motionPreset": {
+    "key": "minimal-slow-reveal",
+    "label": "Minimal Luxury Slow Reveal",
+    "selectionReason": "visual system default (editorial-motion-masthead → minimal-slow-reveal)",
+    "contentGated": false
+  },
+  "experimentalPreset": null,
+  "selectionSignals": {
+    "servicesCount": 4,
+    "imagePoolCount": 0,
+    "hasRelevantImagery": false
+  },
+  "resolvedVisualDirection": {
+    "palette_source": "art_direction",
+    "palette_key": "editorial-motion-masthead",
+    "palette": {
+      "key": "editorial-motion-masthead",
+      "primary": "#1c1c1c",
+      "primaryDark": "#000000",
+      "accent": "#a9702f",
+      "textDark": "#1c1c1c",
+      "textOnPrimary": "#fbf6ef",
+      "bgLight": "#faf7f0",
+      "bgAlt": "#f0ebdd",
+      "border": "#e3dbc9",
+      "radius": "0px",
+      "ctaStyle": "outline",
+      "headingFont": "Fraunces",
+      "bodyFont": "Source Sans 3",
+      "googleFonts": "Fraunces:opsz,wght@9..144,500..800|Source+Sans+3:wght@400;500;600"
+    },
+    "hero_variant": "editorial-masthead-hero",
+    "section_style": "boxed",
+    "image_category": "general",
+    "matched_keywords": [],
+    "visual_system": "editorial-motion-masthead",
+    "visual_system_label": "Editorial Motion — masthead & pull-quote",
+    "visual_system_reason": "explicitly forced (status: pending_review)",
+    "motion_preset": "minimal-slow-reveal",
+    "motion_preset_label": "Minimal Luxury Slow Reveal",
+    "motion_preset_reason": "visual system default (editorial-motion-masthead → minimal-slow-reveal)",
+    "motion_preset_content_gated": false,
+    "services_count": 4,
+    "image_pool_count": 0,
+    "has_relevant_imagery": false,
+    "experimental_preset": null,
+    "experimental_preset_label": null,
+    "experimental_preset_reason": null
+  }
+}
