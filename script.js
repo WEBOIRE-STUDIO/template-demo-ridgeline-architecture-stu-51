@@ -718,6 +718,7 @@
           var orbGeo = new THREE.SphereGeometry(1.6, 48, 48);
           var orbMat = new THREE.MeshStandardMaterial({ color: accentColor, emissive: accentColor, emissiveIntensity: 1.1, roughness: 0.25, metalness: 0.1 });
           var orb = new THREE.Mesh(orbGeo, orbMat);
+          orb.position.set(5.6, -0.3, 0); // well right-of-center — keeps the left text column clear (see base.css)
           scene.add(orb);
           var orbLight = new THREE.PointLight(accentColor, 2.2, 20);
           orb.add(orbLight);
@@ -725,13 +726,15 @@
           var shardCount = isMobile ? 2 : 4;
           var shards = [];
           for (var i = 0; i < shardCount; i++) {
-            var w = 3 + Math.random() * 2.5, h = 5 + Math.random() * 3;
+            var w = 2 + Math.random() * 1.4, h = 3.2 + Math.random() * 1.8;
             var geo = new THREE.PlaneGeometry(w, h);
             var mat = new THREE.MeshStandardMaterial({ color: 0x101014, roughness: 0.35, metalness: 0.4, side: THREE.DoubleSide, transparent: true, opacity: 0.92 });
             var mesh = new THREE.Mesh(geo, mat);
             var angle = (i / shardCount) * Math.PI * 2;
-            var radius = 3.5 + Math.random() * 1.5;
-            mesh.position.set(Math.cos(angle) * radius, (Math.random() - 0.5) * 3, Math.sin(angle) * radius - 2);
+            var radius = 2.4 + Math.random() * 1.2;
+            // Clamped so no shard's left edge can drift back toward the
+            // text column on the left (see .hero-immersive-3d .hero-inner).
+            mesh.position.set(5.6 + Math.max(0, Math.cos(angle)) * radius, (Math.random() - 0.5) * 3, Math.sin(angle) * radius - 2);
             mesh.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * 0.6);
             mesh.userData = { spin: (Math.random() - 0.5) * 0.0015, baseY: mesh.position.y };
             scene.add(mesh);
