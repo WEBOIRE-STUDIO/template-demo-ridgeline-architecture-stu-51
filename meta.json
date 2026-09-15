@@ -3,9 +3,9 @@
   "heroVariant": "editorial-masthead-hero",
   "serviceLayout": "numbered-list",
   "ctaStyle": "outline",
-  "paletteSeed": 0,
-  "heroSeed": 0,
-  "copySeed": 0,
+  "paletteSeed": 1,
+  "heroSeed": 1,
+  "copySeed": 1,
   "artDirection": {
     "key": "editorial-motion-masthead",
     "label": "Editorial Motion — masthead & pull-quote",
